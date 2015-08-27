@@ -1,0 +1,21 @@
+// 1.cpp : Defines the entry point for the console application.
+// AUTOR: Juan Gabriel Villafuerte g
+// tema: area de un rectangulo
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main ()
+{
+	int a,b,c;
+		cout<<"ingrese base" <<endl;
+		cin>> a;
+		cout<<"ingrese altura" <<endl;
+		cin>> b;
+		c=(a*b);
+		cout<<"el area del rectangulo: "<< c << endl;
+		getch ();
+}
+
+
