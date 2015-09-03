@@ -1,0 +1,21 @@
+
+// Autor: juan gabriel villafuerte
+// fecha:9/3/2015
+
+#include "stdafx.h" //libreria
+#include "conio.h"  //libreria
+#include <iostream> //libreria
+
+using namespace std;
+void main()  //funcion que devuelve un valor
+{
+	float area,base,altura;     //declaracion de variables
+	cout<<"ingrese base :";     //salida a pantalla 
+	cin>>base;                  //entrada de datos 1
+	cout<<"ingrese altura:";    //salida a pantalla  
+	cin>>altura;                //entrada de datos 2
+	area=(base*altura)/2;       //operacion a realizar
+	cout<<"el area es:"<< area; //nombre del resultado
+	getch(); //detiene la pantalla
+
+} 
