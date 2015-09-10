@@ -1,0 +1,31 @@
+// NUMEROMAYOR.cpp : Defines the entry point for the console application.
+//autor:juan gabriel villafuerte g
+//fecha:9/10/2015
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+	
+void main()
+{
+	float A,B,C;
+	cout<<"A: ";
+	cin>> A;
+    cout<<"B: ";
+	cin>> B;
+    cout<<"C: ";
+	cin>> C;
+
+	if (A>B)
+	   if (A>C)
+		cout<<"el mayor es: "<<A;
+	   else
+		cout<<"el mayor es: "<<C;
+	else
+		if (B>C)
+		cout<<"el mayor es: "<<B;
+		else
+		cout<<"el mayor es: "<<C;
+	getch();
+}
