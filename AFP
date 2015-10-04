@@ -1,0 +1,24 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void main()
+{
+ int a,b;
+ float salmin,i,n,d,suma;
+ cout<<"numero de personas";
+ cin>>a;
+ salmin=1656*2;
+ suma=0;
+ for(i=1;a>=i;i++){
+	 cout<<"introducir salario";
+	 cin>>b;
+	  if(b>=salmin)
+		  d=b*1.21;
+	  else
+		  d=b*0.2;
+	    cout<<"afp es :"<<d<<":"<<endl;
+		suma=suma+d;}
+  cout<<"afp total es"<<suma<<endl;
+  getch();
+}
