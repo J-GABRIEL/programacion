@@ -1,0 +1,75 @@
+autor:juan gabriel villafuerte gutierrez
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "math.h"
+using namespace std;
+float potencia(float P, float E);
+float sumars(float dato);
+float area(float radio);
+void main()
+{
+	float a,b,pot,k,p;
+	int opcion,e;
+	do{
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. potencia\n";
+		cout<<"2. sumar los n \n";
+		cout<<"3. Area del circulo\n";
+		cout<<"0. Salir\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		switch(opcion)
+			{
+		       case 1: cout<<"Ingrese numero base: ";
+			    cin>> p;
+				cout<<"ingrese exponente: ";
+				cin>> e;
+				pot= potencia(p,e);
+				cout<<"la potencia es: "<<pot;
+				break;
+			   case 2: cout<<"ingrese n: ";
+			    cin>> a;
+				cout<<"la sumatoria es: "<<sumars(a)<<endl;
+				break;
+		        case 3: cout<<"Ingrese radio: ";
+			    cin>> k;
+				cout<<"El area es: "<<area(k)<<endl;
+				break;
+		        case 0: cout<<"Saliendo del Menu";
+			    break;
+		        default: cout <<"ERROR de opcion";
+			    break; 
+}
+
+
+		getch();
+		system("cls");
+	}while (opcion!=0);
+	getch();
+
+}
+
+float potencia(float P, float E)
+{
+  float acum;
+  acum=1;
+  for(int i=1;i<=E;i++)
+	  acum=acum*P;
+  return(acum);
+}
+float sumars(float dato){
+	int s;
+	s=0;
+	for(int i=1;i<=dato;i++)
+	s=s+i;
+    return(s);    
+}
+float area(float radio )
+{
+	float A;
+	A=3.14*radio*radio;
+	return(A);
+}
