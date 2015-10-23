@@ -1,0 +1,85 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "stdlib.h"
+#include "Math.h"
+
+using namespace std;
+
+float promedio(float f);
+int mayor(int A);
+int sumatoria(int n);
+
+void main()
+{
+	float b,a,d,f,prom,z;
+	int opcion;
+	int numero;
+	// Menu
+	do {
+		//Desplegar las opciones
+		cout<<"\t\t Menu \n";
+		cout<<"\t\t ==== \n";
+		cout<<"1. promedio\n";
+		cout<<"2. numero mayor\n";
+		cout<<"3. suma de digitos\n";
+		cout<<"0. Salir\n";
+		cout<<"Opcion: ";
+		cin>>opcion;
+		// Condicional multiple
+		switch (opcion)
+		{
+		case 1: cout<<"ingrese n:";
+			    cin>> f;
+				prom=promedio(f);
+				cout<<"El factorial es: "<<prom;
+				break;
+		case 2: cout<<"ingrese n: ";
+			    cin>> a;
+				cout<<"el mayor es: "<<mayor(a);
+				break;
+		case 3: cout<<"ingrese numero: "<<endl;
+                cin>>numero;
+                cout<<"la suma es: "<<sumatoria(numero)<<endl;
+				break;
+		case 0: cout<<"Saliendo del Menu";
+			    break;
+		default: cout <<"ERROR de opcion";
+			    break;
+		}
+		getch();
+		system("cls");
+	}while (opcion!=0);
+	getch();
+
+}
+
+float promedio(float f)
+{
+  int p,resultado=0;
+  for (int i=1;i<=f;i++){
+	  cout<<"ingrese numero: ";
+	  cin>>p;
+	  resultado=resultado+p;}
+  return (resultado/f);
+}
+int mayor(int A)
+{
+	int mayor = 0,B;
+	for(int i=1; i<=A; i++){ 
+	cout<<"ingrese numero:";
+	cin >> B;
+
+if(B>mayor){ 
+mayor=B; 
+}
+ 
+   } return mayor;
+}
+
+	int sumatoria(int n){
+	if(n==0){
+	return n;}
+	else{
+	}		return n%10+sumatoria(n/10);
+}
