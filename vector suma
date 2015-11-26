@@ -1,0 +1,46 @@
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+
+using namespace std;
+void cargar (float vect[],int n,float x);
+void mostrar(float vect[],int n);
+void sumar(float vect[],int n, float &acum);
+void main()
+{
+  int n;
+  float s,vect[MAX],x;
+  cout<<"ingrese base: ";
+  cin>>x;   
+  cout<<"ingrese N: ";
+  cin>>n;
+  cargar(vect,x,n);
+  mostrar(vect,n);
+  sumar(vect,n,s);
+  cout<<"la suma es :"<<s;
+  getch();}
+
+ void cargar(float vect[],int n,float x)
+ {
+	 int j,fact=1;
+	vect[0]=2;
+	 j=0;
+	 for(int i=1;i<=n;i=i++)
+	 {
+	vect[i]= pow(x,i)/fact;
+		 fact=fact*(i+1);
+	 } 
+ }
+ void mostrar(float vect[],int n)
+ {
+	 for(int i=0;i<n;i++)
+		 cout<<"vect["<<i<<"]="<<vect[i]<<endl;
+ }
+void sumar(float vect[],int n,float &acum)
+{
+	acum=0;
+	for( int i=0;i<n;i++)
+		acum=acum+vect[i];
+}
